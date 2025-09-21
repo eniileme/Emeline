@@ -1,9 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emeline Le Guillou — Coming Soon
+
+A minimal, production-ready "Coming Soon" site built with Next.js 15, TypeScript, and Tailwind CSS.
+
+## Features
+
+- ✨ Modern, responsive design with dark gradient background
+- 🎨 Tailwind CSS for styling with custom animations
+- 🔍 SEO optimized with Open Graph and Twitter Card meta tags
+- 🚀 Production-ready with security headers and redirects
+- 📱 Fully accessible with proper ARIA labels and keyboard navigation
+- 🎯 Single page application with centered layout
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Font**: Inter (Google Fonts)
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd emeline-le-guillou-coming-soon
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +54,129 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Deploy to Vercel
 
-## Learn More
+The easiest way to deploy is using the [Vercel Platform](https://vercel.com/new):
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with zero configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No environment variables are required for basic functionality.
 
-## Deploy on Vercel
+### Custom Domain Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site is configured to redirect from `emelineleguillou.com` to `emeline.fi`. Update the `vercel.json` file if you need different redirects.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## SEO Configuration
+
+### Enable Indexing
+
+By default, the site is set to `noindex` for the coming soon phase. To enable indexing:
+
+1. Update `app/layout.tsx`:
+```typescript
+robots: {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+  },
+},
+```
+
+2. Update `app/robots.txt/route.ts`:
+```typescript
+const robotsTxt = `User-agent: *
+Allow: /`;
+```
+
+### Meta Tags
+
+The site includes comprehensive meta tags for:
+- Open Graph (Facebook, LinkedIn)
+- Twitter Cards
+- SEO optimization
+- Favicon and Apple touch icons
+
+## Maintenance Mode
+
+For existing Next.js applications, you can use the maintenance mode feature:
+
+1. Set environment variable: `MAINTENANCE=1`
+2. The middleware will serve `/coming-soon` for all routes except:
+   - `/_next/*` (Next.js assets)
+   - `/api/*` (API routes)
+   - `/favicon.ico`
+   - `/og.png`
+   - `/preview-secret` (bypass route)
+
+## Project Structure
+
+```
+├── app/
+│   ├── globals.css          # Global styles and Tailwind config
+│   ├── layout.tsx           # Root layout with metadata
+│   ├── page.tsx             # Main coming soon page
+│   ├── robots.txt/          # Dynamic robots.txt
+│   └── sitemap.ts           # Dynamic sitemap
+├── public/
+│   ├── favicon.svg          # Custom favicon
+│   └── og.png               # Open Graph image
+├── vercel.json              # Vercel configuration
+└── README.md                # This file
+```
+
+## Customization
+
+### Colors and Styling
+
+Update the gradient and colors in `app/globals.css`:
+```css
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+```
+
+### Content
+
+Update the main content in `app/page.tsx`:
+- Name and title
+- Description text
+- Contact links (LinkedIn, Email)
+- Footer text
+
+### Meta Information
+
+Update metadata in `app/layout.tsx`:
+- Title and description
+- Open Graph tags
+- Twitter Card settings
+- Favicon references
+
+## Security
+
+The site includes comprehensive security headers:
+- Content Security Policy
+- X-Frame-Options
+- X-Content-Type-Options
+- Referrer Policy
+- Permissions Policy
+
+## Performance
+
+- Optimized images and fonts
+- Minimal JavaScript bundle
+- Efficient CSS with Tailwind
+- Proper caching headers for static assets
+
+## License
+
+This project is private and proprietary to Emeline Le Guillou.

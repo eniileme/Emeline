@@ -1,4 +1,4 @@
-export default function Home() {
+export default function ComingSoon() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
       <main className="text-center space-y-8 animate-fade-in">
