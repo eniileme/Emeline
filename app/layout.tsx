@@ -18,8 +18,8 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://emeline.fi'),
   title: "Emeline Le Guillou — Coming Soon",
-  description: "I build customer-centric systems, teams, and products. Portfolio and case studies coming shortly.",
-  keywords: ["Emeline Le Guillou", "product manager", "systems", "teams", "customer-centric"],
+  description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
+  keywords: ["Emeline Le Guillou", "portfolio", "coming soon"],
   authors: [{ name: "Emeline Le Guillou" }],
   creator: "Emeline Le Guillou",
   openGraph: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://emeline.fi",
     title: "Emeline Le Guillou — Coming Soon",
-    description: "I build customer-centric systems, teams, and products. Portfolio and case studies coming shortly.",
+    description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
     siteName: "Emeline Le Guillou",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Emeline Le Guillou — Coming Soon",
-    description: "I build customer-centric systems, teams, and products. Portfolio and case studies coming shortly.",
+    description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
     images: ["/og.png"],
   },
   robots: {
