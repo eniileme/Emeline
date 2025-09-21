@@ -9,8 +9,13 @@ export default function ComingSoon() {
         
         {/* Subheading */}
         <h2 className="text-lg sm:text-xl md:text-2xl text-pink-200 font-jetbrains-mono font-light tracking-wider">
-          coming soon
+          coming soon — portfolio, CV, and projects
         </h2>
+        
+        {/* Tagline */}
+        <p className="text-sm sm:text-base text-slate-400 font-inter font-normal leading-relaxed max-w-md mx-auto animate-fade-in">
+          Customer Success leadership • SaaS growth • side builds
+        </p>
         
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-10">
