@@ -68,7 +68,13 @@ The easiest way to deploy is using the [Vercel Platform](https://vercel.com/new)
 
 ### Environment Variables
 
-No environment variables are required for basic functionality.
+**Required for Google Analytics:**
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: Your Google Analytics 4 Measurement ID (format: G-XXXXXXXXXX)
+
+**Optional:**
+- `MAINTENANCE=1`: Enable maintenance mode
+
+See `ENV_SETUP.md` for detailed setup instructions.
 
 ### Custom Domain Setup
 
@@ -176,6 +182,13 @@ The site includes comprehensive security headers:
 - Minimal JavaScript bundle
 - Efficient CSS with Tailwind
 - Proper caching headers for static assets
+
+## Analytics
+
+- Google Analytics 4 (GA4) integration
+- Privacy-focused implementation
+- Automatic tracking of page views and user interactions
+- Real-time reporting available in Google Analytics dashboard
 
 ## License
 
