@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
@@ -81,6 +82,11 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {children}
         <GoogleAnalytics />
+        <Script
+          src="https://glyphex.io/tracker.js"
+          data-site-id="b526b0bf-dcd4-4550-b991-2110ace9ba21"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
