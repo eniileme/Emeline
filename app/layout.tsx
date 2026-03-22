@@ -61,7 +61,17 @@ export const metadata: Metadata = {
       follow: false,
     },
   },
-  // Favicon: app/icon.png + app/apple-icon.png (Next.js file convention)
+  // Explicit icons + cache-bust query so updated favicons refresh after deploys
+  icons: {
+    icon: [
+      {
+        url: "/icon.png?v=3",
+        type: "image/png",
+        sizes: "192x192",
+      },
+    ],
+    apple: [{ url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({
