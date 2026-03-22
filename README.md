@@ -78,7 +78,7 @@ See `ENV_SETUP.md` for detailed setup instructions.
 
 ### Custom Domain Setup
 
-The site is configured to redirect from `emelineleguillou.com` to `emeline.fi`. Update the `vercel.json` file if you need different redirects.
+Canonical URLs in code use **`emelineleguillou.com`**. Configure any extra domain redirects (e.g. `emeline.fi` → `.com`) in the **Vercel project → Domains** settings so you don’t duplicate rules in `vercel.json` unless you need host-specific behavior.
 
 ## SEO Configuration
 
@@ -120,7 +120,7 @@ For existing Next.js applications, you can use the maintenance mode feature:
 2. The middleware will serve `/coming-soon` for all routes except:
    - `/_next/*` (Next.js assets)
    - `/api/*` (API routes)
-   - `/favicon.ico`
+   - `/favicon.ico`, `/icon.png`, `/apple-icon.png`
    - `/og.png`
    - `/preview-secret` (bypass route)
 
@@ -129,12 +129,13 @@ For existing Next.js applications, you can use the maintenance mode feature:
 ```
 ├── app/
 │   ├── globals.css          # Global styles and Tailwind config
+│   ├── icon.png             # Favicon (Next.js file convention)
+│   ├── apple-icon.png       # Apple touch icon
 │   ├── layout.tsx           # Root layout with metadata
 │   ├── page.tsx             # Main coming soon page
 │   ├── robots.txt/          # Dynamic robots.txt
 │   └── sitemap.ts           # Dynamic sitemap
 ├── public/
-│   ├── favicon.svg          # Custom favicon
 │   └── og.png               # Open Graph image
 ├── vercel.json              # Vercel configuration
 └── README.md                # This file

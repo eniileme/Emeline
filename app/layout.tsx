@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -24,7 +25,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emeline.fi'),
+  metadataBase: new URL("https://emelineleguillou.com"),
   title: "Emeline Le Guillou — Coming Soon",
   description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
   keywords: ["Emeline Le Guillou", "portfolio", "coming soon"],
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://emeline.fi",
+    url: "https://emelineleguillou.com",
     title: "Emeline Le Guillou — Coming Soon",
     description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
     siteName: "Emeline Le Guillou",
@@ -60,16 +61,7 @@ export const metadata: Metadata = {
       follow: false,
     },
   },
-  icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" }
-    ],
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
-  },
+  // Favicon: app/icon.png + app/apple-icon.png (Next.js file convention)
 };
 
 export default function RootLayout({
