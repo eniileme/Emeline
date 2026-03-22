@@ -26,31 +26,34 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emelineleguillou.com"),
-  title: "Emeline Le Guillou — Coming Soon",
-  description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
-  keywords: ["Emeline Le Guillou", "portfolio", "coming soon"],
+  title: {
+    default: "Emeline Le Guillou",
+    template: "%s — Emeline Le Guillou",
+  },
+  description: "Portfolio — experience, projects, and learning.",
+  keywords: ["Emeline Le Guillou", "portfolio", "customer success"],
   authors: [{ name: "Emeline Le Guillou" }],
   creator: "Emeline Le Guillou",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://emelineleguillou.com",
-    title: "Emeline Le Guillou — Coming Soon",
-    description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
+    title: "Emeline Le Guillou",
+    description: "Portfolio — experience, projects, and learning.",
     siteName: "Emeline Le Guillou",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Emeline Le Guillou — Coming Soon",
+        alt: "Emeline Le Guillou",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emeline Le Guillou — Coming Soon",
-    description: "Coming soon - Emeline Le Guillou's portfolio and case studies.",
+    title: "Emeline Le Guillou",
+    description: "Portfolio — experience, projects, and learning.",
     images: ["/og.png"],
   },
   robots: {

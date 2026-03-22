@@ -128,17 +128,21 @@ For existing Next.js applications, you can use the maintenance mode feature:
 
 ```
 ├── app/
-│   ├── globals.css          # Global styles and Tailwind config
-│   ├── icon.png             # Favicon (Next.js file convention)
-│   ├── apple-icon.png       # Apple touch icon
-│   ├── layout.tsx           # Root layout with metadata
-│   ├── page.tsx             # Main coming soon page
-│   ├── robots.txt/          # Dynamic robots.txt
-│   └── sitemap.ts           # Dynamic sitemap
-├── public/
-│   └── og.png               # Open Graph image
-├── vercel.json              # Vercel configuration
-└── README.md                # This file
+│   ├── (site)/              # Portfolio shell (sidebar layout)
+│   │   ├── layout.tsx
+│   │   ├── page.tsx         # Home
+│   │   ├── about/, experience/, projects/, learning/, now/, contact/
+│   ├── coming-soon/         # Used when MAINTENANCE=1
+│   ├── globals.css
+│   ├── icon.png, apple-icon.png
+│   ├── layout.tsx           # Root layout, fonts, analytics
+│   ├── robots.txt/, sitemap.ts
+│   └── preview-secret/
+├── components/site/         # SiteShell, Sidebar, MobileNav, cards, PageHeader
+├── lib/site.ts              # Nav items + contact links
+├── public/og.png
+├── vercel.json
+└── README.md
 ```
 
 ## Customization
@@ -154,11 +158,9 @@ body {
 
 ### Content
 
-Update the main content in `app/page.tsx`:
-- Name and title
-- Description text
-- Contact links (LinkedIn, Email)
-- Footer text
+- **Global nav & links:** `lib/site.ts` (`MAIN_NAV`, `SITE`).
+- **Page copy:** edit files under `app/(site)/` per route.
+- **Coming soon / maintenance:** `app/coming-soon/page.tsx` when `MAINTENANCE=1`.
 
 ### Meta Information
 
