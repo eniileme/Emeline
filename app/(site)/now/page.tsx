@@ -4,8 +4,8 @@ import { NOW, NOW_METADATA } from "@/content/now";
 
 export default function NowPage() {
   return (
-    <div className="space-y-10">
-      <PageHeader eyebrow={NOW.eyebrow} title={NOW.title} intro={NOW.intro} />
+    <div className="space-y-8">
+      <PageHeader title={NOW.title} intro={NOW.intro} />
       <p className="text-sm font-jetbrains-mono text-slate-500">{NOW.lastUpdatedLine}</p>
 
       <div className="space-y-4">

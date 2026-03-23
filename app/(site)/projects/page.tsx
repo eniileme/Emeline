@@ -4,9 +4,8 @@ import { PROJECTS, PROJECTS_METADATA } from "@/content/projects";
 
 export default function ProjectsPage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       <PageHeader
-        eyebrow={PROJECTS.eyebrow}
         title={PROJECTS.title}
         intro={PROJECTS.intro}
       />

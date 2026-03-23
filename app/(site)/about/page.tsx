@@ -6,7 +6,6 @@ export default function AboutPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        eyebrow={ABOUT.eyebrow}
         title={ABOUT.title}
         intro={ABOUT.intro}
       />

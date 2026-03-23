@@ -4,9 +4,8 @@ import { CONTACT, CONTACT_METADATA } from "@/content/contact";
 
 export default function ContactPage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       <PageHeader
-        eyebrow={CONTACT.eyebrow}
         title={CONTACT.title}
         intro={CONTACT.intro}
       />

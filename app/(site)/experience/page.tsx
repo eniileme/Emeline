@@ -5,9 +5,8 @@ import { EXPERIENCE, EXPERIENCE_METADATA } from "@/content/experience";
 
 export default function ExperiencePage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       <PageHeader
-        eyebrow={EXPERIENCE.eyebrow}
         title={EXPERIENCE.title}
         intro={EXPERIENCE.intro}
       />

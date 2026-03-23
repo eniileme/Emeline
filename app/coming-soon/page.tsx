@@ -20,7 +20,7 @@ export default function ComingSoon() {
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-10">
           <a
-            href="https://www.linkedin.com/in/emeline-l-758a0873/"
+            href="https://www.linkedin.com/in/emlg/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-10 py-4 border border-transparent text-sm font-inter font-medium rounded-full text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-pink-500 focus-visible:outline-offset-2 shadow-lg hover:shadow-xl transform hover:scale-105"

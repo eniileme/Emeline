@@ -3,7 +3,7 @@
 export const SITE = {
   name: "Emeline Le Guillou",
   tagline: "Portfolio & notes",
-  linkedinUrl: "https://www.linkedin.com/in/emeline-l-758a0873/",
+  linkedinUrl: "https://www.linkedin.com/in/emlg/",
   email: "emelineleguillou@gmail.com",
 } as const;
 
