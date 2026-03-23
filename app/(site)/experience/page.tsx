@@ -1,6 +1,6 @@
 import { ContentCard } from "@/components/site/ContentCard";
-import { ExperienceCard } from "@/components/site/ExperienceCard";
 import { PageHeader } from "@/components/site/PageHeader";
+import { CompanyExperienceCard } from "@/components/site/CompanyExperienceCard";
 import { EXPERIENCE, EXPERIENCE_METADATA } from "@/content/experience";
 
 export default function ExperiencePage() {
@@ -29,8 +29,8 @@ export default function ExperiencePage() {
       </div>
 
       <div className="space-y-6">
-        {EXPERIENCE.roles.map((r) => (
-          <ExperienceCard key={r.company} {...r} />
+        {EXPERIENCE.companies.map((c) => (
+          <CompanyExperienceCard key={c.company} company={c} />
         ))}
       </div>
 
