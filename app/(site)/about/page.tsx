@@ -1,31 +1,28 @@
-import type { Metadata } from "next";
 import { ContentCard } from "@/components/site/ContentCard";
 import { PageHeader } from "@/components/site/PageHeader";
-
-export const metadata: Metadata = {
-  title: "About",
-  description: "About Emeline Le Guillou — placeholder.",
-};
+import { ABOUT, ABOUT_METADATA } from "@/content/about";
 
 export default function AboutPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        eyebrow="About"
-        title="About"
-        intro="Placeholder intro — replace with a short bio when ready."
+        eyebrow={ABOUT.eyebrow}
+        title={ABOUT.title}
+        intro={ABOUT.intro}
       />
-      <ContentCard title="Bio">
+      <ContentCard title={ABOUT.cards.bio.title}>
         <p>
-          [Your background, focus areas, and what you care about professionally. Keep it concise; expand later.]
+          {ABOUT.cards.bio.body}
         </p>
       </ContentCard>
-      <ContentCard title="Positioning">
-        <p>[One secondary statement — e.g. how you think about CS, product, or building in public.]</p>
+      <ContentCard title={ABOUT.cards.positioning.title}>
+        <p>{ABOUT.cards.positioning.body}</p>
       </ContentCard>
       <div className="rounded-xl border border-dashed border-white/15 bg-white/[0.02] p-8 text-center text-sm text-slate-500">
-        Photo / avatar area (optional)
+        {ABOUT.avatarPlaceholder}
       </div>
     </div>
   );
 }
+
+export const metadata = ABOUT_METADATA;

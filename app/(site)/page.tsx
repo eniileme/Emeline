@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-
-const featured = [
-  { href: "/projects", title: "Projects", blurb: "Apps and experiments — placeholder grid." },
-  { href: "/learning", title: "Learning", blurb: "Courses, notes, and topics in progress." },
-  { href: "/now", title: "Now", blurb: "What you’re focused on lately." },
-] as const;
+import { HOME } from "@/content/home";
 
 export default function HomePage() {
   return (
@@ -15,11 +10,9 @@ export default function HomePage() {
           {SITE.name}
         </h1>
         <p className="mt-4 text-lg text-pink-200/90 font-jetbrains-mono font-light tracking-wide sm:text-xl">
-          Portfolio, experience, and learning — compact home base
+          {HOME.heroSubtitle}
         </p>
-        <p className="mx-auto mt-4 max-w-lg text-sm text-slate-400 md:mx-0">
-          Short positioning line goes here when you’re ready. This page stays small — no endless scroll.
-        </p>
+        <p className="mx-auto mt-4 max-w-lg text-sm text-slate-400 md:mx-0">{HOME.heroPositioning}</p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-start">
           <a
             href={SITE.linkedinUrl}
@@ -27,23 +20,23 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-transparent bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-3 text-sm font-medium text-white shadow-lg transition hover:from-pink-600 hover:to-purple-700"
           >
-            LinkedIn
+            {HOME.ctas.linkedinLabel}
           </a>
           <a
             href={`mailto:${SITE.email}`}
             className="inline-flex items-center justify-center rounded-full border border-pink-300/30 px-8 py-3 text-sm font-medium text-pink-200 transition hover:border-pink-400 hover:bg-pink-500/10 hover:text-white"
           >
-            Email
+            {HOME.ctas.emailLabel}
           </a>
         </div>
       </section>
 
       <section>
         <h2 className="mb-4 font-jetbrains-mono text-xs font-light uppercase tracking-widest text-slate-500">
-          Explore
+          {HOME.exploreLabel}
         </h2>
         <ul className="grid gap-3 sm:grid-cols-3">
-          {featured.map((item) => (
+          {HOME.featured.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
@@ -58,7 +51,7 @@ export default function HomePage() {
       </section>
 
       <p className="text-center text-xs text-slate-500 font-jetbrains-mono md:text-left">
-        built with Next.js • deployed on Vercel
+        {HOME.footerText}
       </p>
     </div>
   );
