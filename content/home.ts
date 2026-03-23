@@ -6,9 +6,9 @@ export const HOME_METADATA: Metadata = {
 };
 
 export const HOME = {
-  heroSubtitle: "Portfolio, experience, and learning — compact home base",
+  heroSubtitle: "Customer Success Leader | B2B SaaS Growth & Scalability | Automation + applied AI | Builder mindset",
   heroPositioning:
-    "Short positioning line goes here when you’re ready. This page stays small — no endless scroll.",
+    "I’ve spent my career helping SaaS companies grow through better customer experience, stronger operations, and clearer systems. These days, I’m also building projects, learning fast, and exploring how AI and software can make work more useful — and more human.",
   ctas: {
     linkedinLabel: "LinkedIn",
     emailLabel: "Email",
@@ -18,19 +18,19 @@ export const HOME = {
     {
       href: "/projects",
       title: "Projects",
-      blurb: "Apps and experiments — placeholder grid.",
+      blurb: "Things I’m building — practical tools, experiments, and side projects.",
     },
     {
       href: "/learning",
       title: "Learning",
-      blurb: "Courses, notes, and topics in progress.",
+      blurb: "Courses, notes, and topics I’m actively exploring in AI, coding, and product.",
     },
     {
       href: "/now",
       title: "Now",
-      blurb: "What you’re focused on lately.",
+      blurb: "What I’m focused on lately: work, projects, and current priorities.",
     },
   ],
-  footerText: "built with Next.js • deployed on Vercel",
+  footerText: "Built with Next.js, Tailwind, and curiosity.",
 } as const;
 
