@@ -49,6 +49,9 @@ export const EXPERIENCE = {
         "Built systems and programmes including onboarding strategy, marketing automation, touchpoint mapping, and a Power BI-based customer health assessment tool.",
         "Contributed to major business outcomes, including longer customer lifetime, higher LTV, and lower churn, while taking on broader leadership responsibility across Zervant and Ageras.",
       ] as const,
+    },
+    {
+      company: "Zervant",
       role: "Customer Success Manager",
       dates: "May 2018 — Mar 2022",
       summary: "Managed the French-speaking customer base (100k+ users), focusing on onboarding, activation, and helping small businesses get value from the product.",
@@ -57,8 +60,11 @@ export const EXPERIENCE = {
         "Identified friction points in product and user journeys, contributing feedback loops that informed UX and feature improvements.",
         "Worked across support, product, and marketing to improve activation, engagement, and long-term customer value.",
       ] as const,
+    },
+    {
+      company: "Zervant",
       role: "French Customer Service Specialist",
-      dates: "Feb 2018 - May 2018"
+      dates: "Feb 2018 - May 2018",
       summary: "Provided first-line support for French-speaking customers, helping troubleshoot issues and guide them through the product.",
       bullets: [
         "Handled inbound support for French-speaking customers, providing technical assistance and product guidance.",
