@@ -1,26 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-outfit",
+  weight: ["300", "400", "500"],
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  variable: "--font-playfair",
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -83,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${playfairDisplay.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <GoogleAnalytics />

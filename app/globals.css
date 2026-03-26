@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f8fafc;
+  --background: #faf8f6;
+  --foreground: #2a2320;
+  --text-muted: #7a706a;
+  --border-subtle: #e2ddd8;
+  --accent: #c4896a;
+  --card-bg: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-space-grotesk: var(--font-display);
+  --font-jetbrains-mono: var(--font-sans);
+  --font-inter: var(--font-sans);
 }
 
 body {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0d1a 30%, #0f1419 70%, #1a1a1a 100%);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-weight: 300;
   min-height: 100vh;
 }
 
 /* Custom focus styles */
 .focus-visible:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 

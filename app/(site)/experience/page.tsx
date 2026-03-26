@@ -12,14 +12,14 @@ export default function ExperiencePage() {
       />
 
       <div>
-        <p className="mb-2 text-xs font-jetbrains-mono uppercase tracking-wider text-slate-500">
+        <p className="mb-2 text-xs font-jetbrains-mono uppercase tracking-wider text-[#7A706A]">
           {EXPERIENCE.anglesLabel}
         </p>
         <div className="flex flex-wrap gap-2">
           {EXPERIENCE.filterLabels.map((label) => (
             <span
               key={label}
-              className="cursor-default rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-slate-400"
+              className="cursor-default rounded-full border-[0.5px] border-[#E2DDD8] bg-[#FFFFFF] px-3 py-1 text-xs text-[#7A706A]"
               title={EXPERIENCE.pillTitle}
             >
               {label}
@@ -35,7 +35,7 @@ export default function ExperiencePage() {
       </div>
 
       <ContentCard title={EXPERIENCE.cvCard.title}>
-        <p className="text-slate-500">{EXPERIENCE.cvCard.body}</p>
+        <p className="text-[#7A706A]">{EXPERIENCE.cvCard.body}</p>
       </ContentCard>
     </div>
   );

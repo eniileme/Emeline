@@ -84,14 +84,14 @@ export function MobileNav() {
 
   return (
     <div className="md:hidden">
-      <div className="flex items-center justify-between border-b border-white/10 bg-black/30 px-4 py-3 backdrop-blur-sm">
-        <Link href="/" className="font-space-grotesk text-base font-semibold text-white">
+      <div className="flex items-center justify-between border-b border-[0.5px] border-[#E2DDD8] bg-[#FAF8F6] px-4 py-3">
+        <Link href="/" className="font-space-grotesk text-base font-bold text-[#2A2320]">
           {SITE.name}
         </Link>
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="rounded-lg border border-white/15 px-3 py-2 text-sm text-slate-200 hover:bg-white/5"
+          className="rounded-full border border-[0.5px] border-[#C4A898] px-3 py-2 text-sm text-[#7A706A] hover:text-[#2A2320]"
           aria-expanded={open}
           aria-controls="mobile-nav-panel"
         >
@@ -108,17 +108,17 @@ export function MobileNav() {
       >
         <button
           type="button"
-          className="absolute inset-0 bg-black/60"
+          className="absolute inset-0 bg-[#2A2320]/20"
           onClick={() => setOpen(false)}
           aria-label="Close menu"
         />
         <nav
-          className="absolute right-0 top-0 flex h-full w-[min(100%,18rem)] flex-col border-l border-white/10 bg-[#0c0c0c] p-4 shadow-xl"
+          className="absolute right-0 top-0 flex h-full w-[min(100%,18rem)] flex-col border-l border-[0.5px] border-[#E2DDD8] bg-[#FAF8F6] p-4"
           aria-label="Main mobile"
         >
-          <div className="mb-6 border-b border-white/10 pb-4">
-            <p className="font-space-grotesk text-lg font-semibold text-white">{SITE.name}</p>
-            <p className="text-xs text-slate-500">{SITE.tagline}</p>
+          <div className="mb-6 border-b border-[0.5px] border-[#E2DDD8] pb-4">
+            <p className="font-space-grotesk text-lg font-bold text-[#2A2320]">{SITE.name}</p>
+            <p className="text-xs text-[#A09890]">{SITE.tagline}</p>
           </div>
           <ul className="flex flex-1 flex-col gap-1">
             {MAIN_NAV.map((item) => {
@@ -130,22 +130,23 @@ export function MobileNav() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm ${
-                      active ? "bg-white/10 font-medium text-white" : "text-slate-400 hover:bg-white/5"
+                    className={`flex items-center gap-2 rounded-md px-2 py-2.5 text-sm ${
+                      active ? "font-medium text-[#2A2320]" : "text-[#7A706A] hover:text-[#2A2320]"
                     }`}
                   >
+                    <span className={`h-px w-4 shrink-0 ${active ? "bg-[#C4896A]" : "bg-[#D9D2CA]"}`} />
                     <NavIcon name={item.href} />
-                    {item.label}
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               );
             })}
           </ul>
-          <div className="mt-auto border-t border-white/10 pt-4 text-sm">
-            <a href={SITE.linkedinUrl} className="block py-1 text-pink-300/90" target="_blank" rel="noreferrer">
+          <div className="mt-auto border-t border-[0.5px] border-[#E2DDD8] pt-4 text-sm">
+            <a href={SITE.linkedinUrl} className="block py-1 text-[#C4896A]" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a href={`mailto:${SITE.email}`} className="block py-1 text-pink-300/90">
+            <a href={`mailto:${SITE.email}`} className="block py-1 text-[#C4896A]">
               Email
             </a>
           </div>
