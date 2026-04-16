@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { MobileNav } from "@/components/site/MobileNav";
 import { Sidebar } from "@/components/site/Sidebar";
 
@@ -10,7 +11,7 @@ type SiteShellProps = {
 
 export function SiteShell({ children }: SiteShellProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-[#FAF8F6] md:flex-row">
+    <div className="flex min-h-screen flex-col bg-background text-foreground md:flex-row">
       <div className="hidden md:fixed md:inset-y-0 md:left-0 md:z-40 md:flex md:w-56 md:flex-shrink-0 lg:w-60">
         <Sidebar />
       </div>
@@ -21,6 +22,7 @@ export function SiteShell({ children }: SiteShellProps) {
           <div className="mx-auto w-full max-w-4xl">{children}</div>
         </main>
       </div>
+      <ThemeToggle />
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function AboutPage() {
       <ContentCard title={ABOUT.cards.positioning.title}>
         <p>{ABOUT.cards.positioning.body}</p>
       </ContentCard>
-      <div className="rounded-xl border-[0.5px] border-dashed border-[#E2DDD8] bg-[#FFFFFF] p-8 text-center text-sm text-[#7A706A]">
+      <div className="rounded-xl border-[0.5px] border-dashed border-border bg-card p-8 text-center text-sm text-muted">
         {ABOUT.avatarPlaceholder}
       </div>
     </div>

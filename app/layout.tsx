@@ -4,6 +4,17 @@ import Script from "next/script";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
+const themeInitScript = `
+(function(){
+  try {
+    var k = "emeline-theme";
+    var t = localStorage.getItem(k);
+    if (t === "dark") document.documentElement.classList.add("dark");
+    else if (t === "light") document.documentElement.classList.remove("dark");
+  } catch (e) {}
+})();
+`;
+
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -78,8 +89,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfairDisplay.variable}`}>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${playfairDisplay.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-sans antialiased">
+        <Script id="theme-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         {children}
         <GoogleAnalytics />
         <Script

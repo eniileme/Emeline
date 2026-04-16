@@ -138,9 +138,7 @@ function NavIcon({ name }: { name: string }) {
 function navLinkClass(active: boolean) {
   return [
     "group flex items-center gap-2 rounded-md px-2 py-2 text-sm transition-colors",
-    active
-      ? "font-medium text-[#2A2320]"
-      : "text-[#7A706A] hover:text-[#2A2320]",
+    active ? "font-medium text-foreground" : "text-muted hover:text-foreground",
   ].join(" ");
 }
 
@@ -148,12 +146,12 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="flex h-full w-full flex-col border-r border-[0.5px] border-[#E2DDD8] bg-[#FAF8F6] px-5 py-7">
+    <aside className="flex h-full w-full flex-col border-r border-[0.5px] border-border bg-background px-5 py-7">
       <div className="mb-8">
-        <Link href="/" className="block font-space-grotesk text-lg font-bold tracking-tight text-[#2A2320] leading-tight">
+        <Link href="/" className="block font-space-grotesk text-lg font-bold tracking-tight text-foreground leading-tight">
           {SITE.name}
         </Link>
-        <p className="mt-1 text-xs text-[#A09890]">{SITE.tagline}</p>
+        <p className="mt-1 text-xs text-subtle">{SITE.tagline}</p>
       </div>
 
       <nav className="flex flex-1 flex-col gap-0.5" aria-label="Main">
@@ -164,27 +162,27 @@ export function Sidebar() {
               : pathname === item.href || pathname.startsWith(`${item.href}/`);
           return (
             <Link key={item.href} href={item.href} className={navLinkClass(active)}>
-              <span className={active ? "text-[#2A2320]" : "text-[#7A706A] group-hover:text-[#2A2320]"}>
+              <span className={active ? "text-foreground" : "text-muted group-hover:text-foreground"}>
                 <NavIcon name={item.href} />
               </span>
-              <span className={active ? "text-[#2A2320]" : "text-[#7A706A]"}>{item.label}</span>
+              <span className={active ? "text-foreground" : "text-muted"}>{item.label}</span>
             </Link>
           );
         })}
       </nav>
 
-      <footer className="mt-auto border-t border-[0.5px] border-[#E2DDD8] pt-4">
-        <p className="mb-2 text-[10px] font-jetbrains-mono uppercase tracking-[0.12em] text-[#B0A89E]">Connect</p>
+      <footer className="mt-auto border-t border-[0.5px] border-border pt-4">
+        <p className="mb-2 text-[10px] font-jetbrains-mono uppercase tracking-[0.12em] text-eyebrow">Connect</p>
         <div className="flex flex-col gap-1 text-sm">
           <a
             href={SITE.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#C4896A] hover:text-[#A96F54]"
+            className="text-accent hover:text-accent-hover"
           >
             LinkedIn
           </a>
-          <a href={`mailto:${SITE.email}`} className="text-[#C4896A] hover:text-[#A96F54]">
+          <a href={`mailto:${SITE.email}`} className="text-accent hover:text-accent-hover">
             Email
           </a>
         </div>

@@ -11,7 +11,7 @@ export default function LearningPage() {
       />
 
       <section className="space-y-3">
-        <h2 className="font-space-grotesk text-lg font-medium text-[#2A2320]">{LEARNING.currentFocus.heading}</h2>
+        <h2 className="font-space-grotesk text-lg font-medium text-foreground">{LEARNING.currentFocus.heading}</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {LEARNING.currentFocus.cards.map((card) => (
             <ContentCard key={card.title} title={card.title}>
@@ -22,14 +22,14 @@ export default function LearningPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="font-space-grotesk text-lg font-medium text-[#2A2320]">{LEARNING.notes.heading}</h2>
+        <h2 className="font-space-grotesk text-lg font-medium text-foreground">{LEARNING.notes.heading}</h2>
         <ContentCard>
           <p>{LEARNING.notes.body}</p>
         </ContentCard>
       </section>
 
       <section className="space-y-3">
-        <h2 className="font-space-grotesk text-lg font-medium text-[#2A2320]">{LEARNING.builds.heading}</h2>
+        <h2 className="font-space-grotesk text-lg font-medium text-foreground">{LEARNING.builds.heading}</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {LEARNING.builds.cards.map((card) => (
             <ContentCard key={card.title} title={card.title}>

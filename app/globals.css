@@ -1,17 +1,65 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --background: #faf8f6;
   --foreground: #2a2320;
-  --text-muted: #7a706a;
-  --border-subtle: #e2ddd8;
+  --muted: #7a706a;
+  --border: #e2ddd8;
   --accent: #c4896a;
-  --card-bg: #ffffff;
+  --accent-hover: #a96f54;
+  --card: #ffffff;
+  --surface-muted: #faf8f6;
+  --subtle: #a09890;
+  --eyebrow: #b0a89e;
+  --summary: #5f5651;
+  --timeline-dot: #d9d2ca;
+  --primary-btn-bg: #2a2320;
+  --primary-btn-text: #faf8f6;
+  --primary-btn-hover: #1f1a18;
+  --secondary-border: #c4a898;
+  --scrim: rgb(42 35 32 / 0.2);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #141210;
+  --foreground: #f4f0eb;
+  --muted: #a39a92;
+  --border: #3a3532;
+  --accent: #d4a088;
+  --accent-hover: #e8b89a;
+  --card: #1e1c1a;
+  --surface-muted: #262422;
+  --subtle: #8a827a;
+  --eyebrow: #7a726a;
+  --summary: #c9c2ba;
+  --timeline-dot: #4a4540;
+  --primary-btn-bg: #f4f0eb;
+  --primary-btn-text: #141210;
+  --primary-btn-hover: #e8e2db;
+  --secondary-border: #5c524c;
+  --scrim: rgb(0 0 0 / 0.55);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-card: var(--card);
+  --color-surface-muted: var(--surface-muted);
+  --color-subtle: var(--subtle);
+  --color-eyebrow: var(--eyebrow);
+  --color-summary: var(--summary);
+  --color-timeline-dot: var(--timeline-dot);
+  --color-primary-btn: var(--primary-btn-bg);
+  --color-primary-btn-fg: var(--primary-btn-text);
+  --color-primary-btn-hover: var(--primary-btn-hover);
+  --color-secondary-border: var(--secondary-border);
+  --color-scrim: var(--scrim);
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-playfair), ui-serif, Georgia, serif;
   --font-space-grotesk: var(--font-display);
@@ -25,6 +73,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Custom focus styles */

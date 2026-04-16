@@ -10,14 +10,14 @@ function RoleTimelineItem({ isLatest, showLine }: RoleTimelineItemProps) {
     <div className="relative w-6 flex-shrink-0 pt-2">
       {showLine ? (
         <div
-          className="absolute left-1/2 top-4 bottom-0 w-px -translate-x-1/2 bg-[#E2DDD8]"
+          className="absolute left-1/2 top-4 bottom-0 w-px -translate-x-1/2 bg-border"
           aria-hidden="true"
         />
       ) : null}
       <span
         className={[
-          "absolute left-1/2 top-2 h-1.5 w-1.5 -translate-x-1/2 rounded-full ring-1 ring-[#E2DDD8]",
-          isLatest ? "bg-[#C4896A]" : "bg-[#D9D2CA]",
+          "absolute left-1/2 top-2 h-1.5 w-1.5 -translate-x-1/2 rounded-full ring-1 ring-border",
+          isLatest ? "bg-accent" : "bg-timeline-dot",
         ].join(" ")}
         aria-hidden="true"
       />
@@ -51,19 +51,19 @@ export function CompanyExperienceCard({ company }: CompanyExperienceCardProps) {
     .map((x) => x.role);
 
   return (
-    <section className="relative rounded-xl border-[0.5px] border-[#E2DDD8] bg-[#FFFFFF] p-6">
-      <div className="absolute left-0 right-0 top-0 h-0.5 bg-[#C4896A]/50" aria-hidden="true" />
+    <section className="relative rounded-xl border-[0.5px] border-border bg-card p-6">
+      <div className="absolute left-0 right-0 top-0 h-0.5 bg-accent/50" aria-hidden="true" />
       <header className="flex items-start justify-between gap-6">
-        <h2 className="font-space-grotesk text-lg font-semibold tracking-tight text-[#2A2320]">
+        <h2 className="font-space-grotesk text-lg font-semibold tracking-tight text-foreground">
           {company.company}
         </h2>
 
         <div className="text-right">
-          <p className="font-jetbrains-mono text-xs uppercase tracking-[0.12em] text-[#7A706A]">
+          <p className="font-jetbrains-mono text-xs uppercase tracking-[0.12em] text-muted">
             {company.companyDates}
           </p>
           {company.totalDuration ? (
-            <p className="mt-1 text-xs text-[#A09890]">{company.totalDuration}</p>
+            <p className="mt-1 text-xs text-subtle">{company.totalDuration}</p>
           ) : null}
         </div>
       </header>
@@ -81,27 +81,27 @@ export function CompanyExperienceCard({ company }: CompanyExperienceCardProps) {
               <div
                 className={[
                   "flex-1",
-                  hasDivider ? "border-b border-[0.5px] border-[#E2DDD8] pb-8" : "",
+                  hasDivider ? "border-b border-[0.5px] border-border pb-8" : "",
                 ].join(" ")}
               >
                 <div className="max-w-[52ch]">
                   <h3
                     className={[
-                      "font-space-grotesk text-base tracking-tight",
-                      isLatest ? "font-semibold text-[#2A2320]" : "font-medium text-[#2A2320]",
+                      "font-space-grotesk text-base tracking-tight text-foreground",
+                      isLatest ? "font-semibold" : "font-medium",
                     ].join(" ")}
                   >
                     {role.role}
                   </h3>
 
-                  <p className="mt-1 font-jetbrains-mono text-xs text-[#7A706A]">{role.dates}</p>
+                  <p className="mt-1 font-jetbrains-mono text-xs text-muted">{role.dates}</p>
                 </div>
 
-                <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-[#5F5651]">
+                <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-summary">
                   {role.summary}
                 </p>
 
-                <ul className="mt-5 max-w-[52ch] list-inside list-disc space-y-2 text-sm text-[#7A706A]">
+                <ul className="mt-5 max-w-[52ch] list-inside list-disc space-y-2 text-sm text-muted">
                   {role.bullets.map((b) => (
                     <li key={b}>{b}</li>
                   ))}

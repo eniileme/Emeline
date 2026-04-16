@@ -6,7 +6,7 @@ export default function NowPage() {
   return (
     <div className="space-y-8">
       <PageHeader title={NOW.title} intro={NOW.intro} />
-      <p className="text-sm font-jetbrains-mono text-[#7A706A]">{NOW.lastUpdatedLine}</p>
+      <p className="text-sm font-jetbrains-mono text-muted">{NOW.lastUpdatedLine}</p>
 
       <div className="space-y-4">
         <ContentCard title={NOW.cards[0].title}>
