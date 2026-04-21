@@ -15,9 +15,12 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="flex h-full w-full flex-col border-r border-[0.5px] border-border bg-background px-5 py-7">
-      <div className="mb-8">
-        <Link href="/" className="block font-space-grotesk text-lg font-bold tracking-tight text-foreground leading-tight">
+    <aside className="flex h-full w-max max-w-full flex-col border-r border-[0.5px] border-border bg-background px-5 py-7">
+      <div className="mb-8 w-full text-center">
+        <Link
+          href="/"
+          className="block font-space-grotesk text-lg font-bold tracking-tight text-foreground leading-tight"
+        >
           {SITE.name}
         </Link>
         <p className="mt-1 text-xs text-subtle">{SITE.tagline}</p>
@@ -39,7 +42,7 @@ export function Sidebar() {
         })}
       </nav>
 
-      <footer className="mt-auto border-t border-[0.5px] border-border pt-4">
+      <footer className="mt-auto pt-4">
         <p className="mb-2 text-[10px] font-jetbrains-mono uppercase tracking-[0.12em] text-eyebrow">Connect</p>
         <div className="flex flex-col gap-1 text-sm">
           <a

@@ -80,7 +80,7 @@ export function MobileNav() {
               );
             })}
           </ul>
-          <div className="mt-auto border-t border-[0.5px] border-border pt-4 text-sm">
+          <div className="mt-auto pt-4 text-sm">
             <a href={SITE.linkedinUrl} className="block py-1 text-accent hover:text-accent-hover" target="_blank" rel="noreferrer">
               LinkedIn
             </a>

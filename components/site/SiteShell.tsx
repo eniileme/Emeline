@@ -11,18 +11,18 @@ type SiteShellProps = {
 
 export function SiteShell({ children }: SiteShellProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground md:flex-row">
-      <div className="hidden md:fixed md:inset-y-0 md:left-0 md:z-40 md:flex md:w-56 md:flex-shrink-0 lg:w-60">
+    <div className="relative flex min-h-screen flex-col bg-background text-foreground md:grid md:min-h-screen md:grid-cols-[max-content_minmax(0,1fr)]">
+      <div className="hidden md:sticky md:top-0 md:z-40 md:flex md:h-svh md:max-h-screen md:w-max md:flex-shrink-0 md:self-start">
         <Sidebar />
       </div>
 
-      <div className="flex min-h-screen flex-1 flex-col md:pl-56 lg:pl-60">
+      <div className="flex min-h-screen flex-1 flex-col md:min-w-0">
         <MobileNav />
         <main className="flex-1 px-5 py-9 sm:px-7 sm:py-10 lg:px-12 lg:py-12">
           <div className="mx-auto w-full max-w-4xl">{children}</div>
         </main>
+        <ThemeToggle />
       </div>
-      <ThemeToggle />
     </div>
   );
 }
