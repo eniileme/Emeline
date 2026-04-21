@@ -2,23 +2,24 @@ import type { Metadata } from "next";
 
 export const ABOUT_METADATA: Metadata = {
   title: "About",
-  description: "About Emeline Le Guillou — placeholder.",
+  description:
+    "Customer Success in B2B SaaS and small products around organisation, clarity, and decision-making.",
 };
 
+/** Editorial About copy — no card titles. */
 export const ABOUT = {
-  eyebrow: "About",
   title: "About",
-  intro: "Placeholder intro — replace with a short bio when ready.",
-  cards: {
-    bio: {
-      title: "Bio",
-      body: "[Your background, focus areas, and what you care about professionally. Keep it concise; expand later.]",
-    },
-    positioning: {
-      title: "Positioning",
-      body: "[One secondary statement — e.g. how you think about CS, product, or building in public.]",
-    },
+  intro: "I like building tools that make complex things feel simple.",
+  bioParagraphs: [
+    "I work in Customer Success in B2B SaaS. I also design and build small products around organisation, clarity, and decision-making.",
+  ] as const,
+  themes: {
+    heading: "Themes",
+    line: "clarity · structure · metadata · calm UX",
   },
-  avatarPlaceholder: "Photo / avatar area (optional)",
+  /** Optional small section; leave `body` empty to hide. */
+  currently: {
+    heading: "Currently",
+    body: "",
+  } as const,
 } as const;
-
