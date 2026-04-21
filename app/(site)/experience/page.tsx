@@ -5,7 +5,7 @@ import { EXPERIENCE, EXPERIENCE_METADATA } from "@/content/experience";
 
 export default function ExperiencePage() {
   return (
-    <div className="space-y-8">
+    <div className="mx-auto w-full max-w-[720px] space-y-8">
       <PageHeader
         title={EXPERIENCE.title}
         intro={EXPERIENCE.intro}
@@ -28,7 +28,7 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-3">
         {EXPERIENCE.companies.map((c) => (
           <CompanyExperienceCard key={c.company} company={c} />
         ))}
