@@ -21,14 +21,27 @@ export type ExperienceCompany = {
 
 export const EXPERIENCE_COMPANIES: ExperienceCompany[] = [
   {
-    company: "Boksi.com Solutions",
-    companyDates: "Jan 2025 — Present",
+    company: "M-Files",
+    companyDates: "Apr 2026 — Present",
+    roles: [
+      {
+        role: "Customer Success Manager",
+        dates: "Apr 2026 — Present",
+        summary:
+          "Supporting enterprises in making sense of document complexity, improving findability, workflows, and scalability through better information structure. Currently getting up to speed on the product, customer landscape, and business context ahead of taking on a significant enterprise portfolio.",
+        bullets: [],
+      },
+    ],
+  },
+  {
+    company: "MarTech SaaS startup",
+    companyDates: "Jan 2025 — Apr 2026",
     roles: [
       {
         role: "Global Head of Customer Success",
-        dates: "Jan 2025 — Present",
+        dates: "Jan 2025 — Apr 2026",
         summary:
-          "Leading Boksi’s international Customer Success organisation across Finland, Germany, and the Philippines, with responsibility for team leadership, customer operations, and client growth.",
+          "Led the international Customer Success organisation across Finland, Germany, and the Philippines, with responsibility for team leadership, customer operations, and client growth.",
         bullets: [
           "Manage an international team of 12 across Customer Success and self-service support.",
           "Oversee customer relationships, campaign delivery, and UGC strategy for clients across multiple markets (Finland and Germany).",

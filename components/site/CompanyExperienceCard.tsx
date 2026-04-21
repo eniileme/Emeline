@@ -101,11 +101,13 @@ export function CompanyExperienceCard({ company }: CompanyExperienceCardProps) {
                   {role.summary}
                 </p>
 
-                <ul className="mt-5 max-w-[52ch] list-inside list-disc space-y-2 text-sm text-muted">
-                  {role.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
+                {role.bullets.length > 0 ? (
+                  <ul className="mt-5 max-w-[52ch] list-inside list-disc space-y-2 text-sm text-muted">
+                    {role.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </div>
           );
